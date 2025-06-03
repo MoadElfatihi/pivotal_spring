@@ -1,0 +1,17 @@
+package com.databaseconfig;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import com.databaseconfig.service.EmployeeReportService;
+
+@ComponentScan
+public class Runner {
+
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Runner.class);
+        context.registerShutdownHook();
+
+        EmployeeReportService employeeReportService = context.getBean(EmployeeReportService.class);
+        employeeReportService.printReport();
+    }
+}
