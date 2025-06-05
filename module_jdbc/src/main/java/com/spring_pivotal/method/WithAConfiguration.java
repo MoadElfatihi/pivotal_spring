@@ -1,4 +1,4 @@
-package com.databaseconfig.method;
+package com.spring_pivotal.method;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;

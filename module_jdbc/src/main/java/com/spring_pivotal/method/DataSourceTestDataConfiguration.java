@@ -1,4 +1,4 @@
-package com.databaseconfig.method;
+package com.spring_pivotal.method;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

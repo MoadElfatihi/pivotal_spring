@@ -1,6 +1,6 @@
-package com.databaseconfig.service;
+package com.spring_pivotal.service;
 
-import com.databaseconfig.dao.EmployeeDao;
+import com.spring_pivotal.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

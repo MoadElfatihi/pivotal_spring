@@ -1,8 +1,9 @@
-package com.databaseconfig;
+package com.spring_pivotal;
 
+import com.spring_pivotal.dao.EmployeeDao;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import com.databaseconfig.service.EmployeeReportService;
+import com.spring_pivotal.service.EmployeeReportService;
 
 @ComponentScan
 public class Runner {
@@ -11,7 +12,8 @@ public class Runner {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Runner.class);
         context.registerShutdownHook();
 
-        EmployeeReportService employeeReportService = context.getBean(EmployeeReportService.class);
-        employeeReportService.printReport();
+        EmployeeDao employeDao = context.getBean(EmployeeDao.class);
+        employeDao.findEmployeeEmails().forEach(System.out::println);
+        System.out.println("Average employe salary= "+employeDao.findAverageSalaryRowByRow());
     }
 }
