@@ -11,6 +11,8 @@
     </parent>
 
     <artifactId>mycustomautoconfiguration</artifactId>
+    <packaging>pom</packaging>
+
 
     <dependencies>
 
